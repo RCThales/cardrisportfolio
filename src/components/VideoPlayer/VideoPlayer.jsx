@@ -22,8 +22,8 @@ const VideoPlayer = () => {
 
         <TabPanel className={"min-w-[100%]"}>
           <div className="px-10 py-4 border-purple-700 border border-opacity-[0.3] rounded-b-lg blur-bg">
-            <h3 className="p-4">
-              DEMO REEL with sound design only (no music) 🔊
+            <h3 className="p-4 text-[1.2rem] text-center font-medium">
+              REEL WITH ONLY SOUND DESIGN (NO MUSIC) 🔊
             </h3>
 
             <video width="1500" controls>
@@ -36,8 +36,9 @@ const VideoPlayer = () => {
         </TabPanel>
         <TabPanel className={""}>
           <div className="px-10 py-4 border-fuchsia-700 border border-opacity-[0.3] rounded-b-lg">
-            <h3 className="p-4">
-              DEMO REEL with music composed by me only (no sound design) 🎼
+            <h3 className="p-4 text-[1.2rem] text-center font-medium">
+              REEL WITH ONLY MUSIC CREATED AND RECORDED BY ME (NO SOUND DESIGN)
+              🎼
             </h3>
             <video width="1500" controls>
               <source
@@ -49,9 +50,8 @@ const VideoPlayer = () => {
         </TabPanel>
         <TabPanel>
           <div className="px-10 py-4 border-pink-700 border border-opacity-[0.3] rounded-b-lg">
-            <h3 className="p-4">
-              DEMO REEL with all of the sounds together for the complete
-              experience 😎
+            <h3 className="p-4 text-[1.2rem] text-center font-medium">
+              COMPLETE DEMO REEL WITH MUSIC AND SOUND DESIGN FOR THE FULL EXPERIENCE 😎
             </h3>
             <video width="1500" controls>
               <source
