@@ -7,8 +7,9 @@ export default function BrevoConversations() {
         strategy="afterInteractive"
         async
         src="https://conversations-widget.brevo.com/brevo-conversations.js"
+        id="brevo-conversations-external"
       />
-      <Script strategy="afterInteractive">
+      <Script strategy="afterInteractive" id="brevo-conversations-inline">
         {`
         (function(d, w, c) {
             w.BrevoConversationsID = '64feab7d6d2385156e66689f';
