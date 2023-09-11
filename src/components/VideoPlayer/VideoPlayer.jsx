@@ -1,37 +1,11 @@
 "use client";
 
 import React from "react";
-import { MediaOutlet, MediaPlayer, MediaCommunitySkin, MediaPoster } from "@vidstack/react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "vidstack/styles/defaults.css";
 import "vidstack/styles/community-skin/video.css";
 
 const VideoPlayer = () => {
-
-  const FRENCH = {
-    Audio: "Audio",
-    Auto: "Automatique",
-    Captions: "Sous-titres",
-    Chapters: "Chapitres",
-    Default: "Défaut",
-    Mute: "Muet",
-    Normal: "Normal",
-    Off: "Désactivé",
-    Pause: "Pause",
-    Play: "Lecture",
-    Speed: "Vitesse",
-    Quality: "Qualité",
-    Settings: "Paramètres",
-    Unmute: "Activer le son",
-    "Seek Forward": "Avancer",
-    "Seek Backward": "Reculer",
-    "Closed-Captions On": "Sous-titres activés",
-    "Closed-Captions Off": "Sous-titres désactivés",
-    "Enter Fullscreen": "Passer en plein écran",
-    "Exit Fullscreen": "Quitter le plein écran",
-    "Enter PiP": "Passer en mode PiP",
-    "Exit PiP": "Quitter le mode PiP",
-  };
 
   return (
     <>
@@ -54,16 +28,12 @@ const VideoPlayer = () => {
               DEMO REEL with sound design only (no music) 🔊
             </h3>
 
-            <MediaPlayer
-              src="https://media-files.vidstack.io/720p.mp4"
-              poster="https://media-files.vidstack.io/poster.png"
-              crossorigin=""
-            >
-              <MediaOutlet>
-                <MediaCommunitySkin translations={FRENCH} />;
-                <MediaPoster alt="Agent 327 blowing flames with a hair dryer." />
-              </MediaOutlet>
-            </MediaPlayer>
+            <video width="1500" controls>
+              <source
+                src="https://media-files.vidstack.io/720p.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </TabPanel>
         <TabPanel className={""}>
@@ -71,16 +41,12 @@ const VideoPlayer = () => {
             <h3 className="p-4">
               DEMO REEL with music composed by me only (no sound design) 🎼
             </h3>
-            <MediaPlayer
-              src="https://media-files.vidstack.io/720p.mp4"
-              poster="https://media-files.vidstack.io/poster.png"
-              crossorigin=""
-            >
-              <MediaOutlet>
-                <MediaCommunitySkin translations={FRENCH} />;
-                <MediaPoster alt="Agent 327 blowing flames with a hair dryer." />
-              </MediaOutlet>
-            </MediaPlayer>
+            <video width="1500" controls>
+              <source
+                src="https://media-files.vidstack.io/720p.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </TabPanel>
         <TabPanel>
@@ -89,16 +55,12 @@ const VideoPlayer = () => {
               DEMO REEL with all of the sounds together for the complete
               experience 😎
             </h3>
-            <MediaPlayer
-              src="https://media-files.vidstack.io/720p.mp4"
-              poster="https://media-files.vidstack.io/poster.png"
-              crossorigin=""
-            >
-              <MediaOutlet>
-                <MediaCommunitySkin translations={FRENCH} />;
-                <MediaPoster alt="Agent 327 blowing flames with a hair dryer." />
-              </MediaOutlet>
-            </MediaPlayer>
+            <video width="1500" controls>
+              <source
+                src="https://media-files.vidstack.io/720p.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </TabPanel>
       </Tabs>
