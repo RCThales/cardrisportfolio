@@ -2,8 +2,6 @@
 
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "vidstack/styles/defaults.css";
-import "vidstack/styles/community-skin/video.css";
 
 const VideoPlayer = () => {
 
