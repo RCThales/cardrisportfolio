@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(var(--background-end-rgb))
+    )
+    rgba(var(--background-start-rgb));
+
+    background-image: url(../images/eq-op.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.glow {
+  box-shadow: 0 0 50px 1px #072a3c30, 0 0 80px 7px #2727213f, 0 0 150px 20px #36115a62,
+    0 0 250px 15px #650b3b78;
+}
