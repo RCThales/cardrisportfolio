@@ -50,12 +50,12 @@ export default function Home() {
         </div>
 
         <p className="max-w-[80%] w-[600px] text-center pt-8">
-          I'm a sound enthusiast, skilled in sound design, engineering, and
-          music. I'm all about diving into the exciting worlds of game and film
-          sound creation. My goal? To craft mind-blowing sound experiences that
-          truly grip people and make them a part of the story. It's all about
-          bringing fresh, captivating sounds to the gaming and filmmaking
-          scenes. 🎵🎮🎥
+          I&apos;m a sound enthusiast, skilled in sound design, engineering, and
+          music. I&apos;m all about diving into the exciting worlds of game and
+          film sound creation. My goal? To craft mind-blowing sound experiences
+          that truly grip people and make them a part of the story. It&apos;s
+          all about bringing fresh, captivating sounds to the gaming and
+          filmmaking scenes. 🎵🎮🎥
         </p>
       </section>
 
