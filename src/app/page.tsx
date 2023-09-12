@@ -1,19 +1,24 @@
 import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
-import  Nav  from "../components/Nav/Nav"
+import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer"
+import Image from "next/image";
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-12">
+    <div className="flex min-h-screen flex-col items-center justify-center pt-12">
       <Nav />
 
-      <main className="relative flex flex-col items-center justify-center m-6 rounded-custom">
-        <h2 className="text-3xl m-10 font-bold">My Demo Reels</h2>
-        <div className="sm:w-[95vw] md:w-[90%] lg:max-w-[90%] lg:w-[90%]">
+      <main className="relative w-screen flex flex-col items-center justify-center m-6 rounded-custom bg_image">
+        <div className="sm:w-[80vw] lg:min-h-screen md:w-[80%] lg:max-w-[90%] lg:w-[60%] flex items-center flex-col">
           <VideoPlayer></VideoPlayer>
         </div>
       </main>
 
-      <main className="relative flex flex-col items-center justify-center m-12 rounded-custom">
-        <h2 className="text-3xl m-10 font-bold opacity-70">Resumé</h2>
+      <section className="relative flex flex-col items-center justify-center p-20 pb-28 bg-gray-900 border border-gray-700 border-opacity-50 bg-opacity-30 h-full w-screen rounded-custom">
+        <div className="w-fit flex justify-center flex-col items-center font-semibold relative">
+          <h2 className="text-3xl m-8 font-bold">Resumé</h2>
+          <div className="cool_title_underline"></div>
+        </div>
+
         <div className="flex justify-center items-center">
           <a
             href={
@@ -21,60 +26,71 @@ export default function Home() {
             }
             target="_blank"
             download={"Thales_Cardris_Resume.pdf"}
-            className="bg-red-500 p-12 rounded-2xl text-2xl transition-all hover:scale-105 active:scale-95"
+            className="bg-red-500 p-8 rounded-2xl text-2xl transition-all hover:scale-105 active:scale-95 text-center"
           >
-            OPEN PDF 📄
+            CLICK TO SEE 📄
           </a>
         </div>
-      </main>
+      </section>
 
-      <footer className="py-24 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-center">
-        <a
-          href="https://www.linkedin.com/in/thalesrodriguescardoso/"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors text-center hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Linkedin{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 text-sm opacity-50`}>Access my Linkedin Profile</p>
-        </a>
-        <a
-          href="https://www.instagram.com/thalescardris/"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors text-center hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Instagram{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 text-sm opacity-50`}>
-            Access my Instagram Profile
-          </p>
-        </a>
-        <a
-          href="mailto:contact@thalescardris.com"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors text-center hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Email{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 text-sm opacity-50 break-words`}>
-            Click to send me an email, or use the chat on the right
-          </p>
-        </a>
-      </footer>
+      <section className="relative flex flex-col items-center justify-center p-20 pb-28 border border-gray-700 border-opacity-50 bg_image_magic bg-black glow bg-opacity-50 h-full w-screen rounded-custom">
+        <div className="w-fit flex justify-center flex-col items-center font-semibold relative">
+          <h2 className="text-3xl m-8 font-bold">About me</h2>
+          <div className="cool_title_underline"></div>
+        </div>
+
+        <div className="flex justify-center items-center glow">
+          <Image
+            width={300}
+            height={300}
+            alt="Thales Cardris picture"
+            className="rounded-xl"
+            src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/profile%20thales.jpeg?alt=media&token=bce3e0dd-5507-47be-a0f3-b0fd81eeac3f"
+          ></Image>
+        </div>
+
+        <p className="max-w-[80%] w-[600px] text-center pt-8">
+          I'm a sound enthusiast, skilled in sound design, engineering, and
+          music. I'm all about diving into the exciting worlds of game and film
+          sound creation. My goal? To craft mind-blowing sound experiences that
+          truly grip people and make them a part of the story. It's all about
+          bringing fresh, captivating sounds to the gaming and filmmaking
+          scenes. 🎵🎮🎥
+        </p>
+      </section>
+
+      <section className="relative flex flex-col items-center justify-center p-20 pb-28 border border-gray-700 border-opacity-50  bg-gray-900 bg-opacity-30 h-full w-screen rounded-custom">
+        <div className="w-fit flex justify-center flex-col items-center font-semibold relative">
+          <h2 className="text-3xl m-8 font-bold">Skills</h2>
+          <div className="cool_title_underline"></div>
+        </div>
+
+        <ul className="max-w-[80%] w-[600px] text-center pt-8">
+          <li className="font-bold">SOUND</li>
+          <li>REAPER</li>
+          <li>Midi Programming</li>
+          <li>VSTi</li>
+          <li>Foley</li>
+          <li>Mixing</li>
+          <li>Mastering</li>
+          <li>Fmod</li>
+          <li>Wwise</li>
+          <br />
+          <li className="font-bold">MUSIC</li>
+          <li>Music Composition</li>
+          <li>Singing professionaly (high tenor)</li>
+          <li>Guitar (Acoustic and Electric)</li>
+          <li>Bass</li>
+          <br />
+          <li className="font-bold">DEVELOPMENT</li>
+          <li>Javascript Programming</li>
+          <li>C# Programming</li>
+          <li>REACT</li>
+          <li>UNITY</li>
+        </ul>
+      </section>
+
+      <Footer></Footer>
     </div>
   );
 }

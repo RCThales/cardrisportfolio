@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-
+  overflow-x: hidden;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -26,22 +26,69 @@ body {
     )
     rgba(var(--background-start-rgb));
 
-    background-image: url(../images/eq-op.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.glow {
-  box-shadow: 0 0 50px 1px #072a3c30, 0 0 80px 7px #2727213f, 0 0 150px 20px #36115a62,
-    0 0 250px 15px #650b3b78;
+
 }
 
-.text-clamp-lg{
-    text-align: center;
+.bg_image{
+    background-image: url(../images/eq-op.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+.bg_image_magic{
+    background-image: url(../images/eq-op.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+        background-attachment: fixed;
+     
+}
+
+.glow {
+  box-shadow: 0 0 50px 1px #072a3c30, 0 0 80px 7px #2727213f,
+    0 0 150px 20px #36115a62, 0 0 250px 15px #650b3b78;
+}
+
+.text-clamp-lg {
+  text-align: center;
   font-size: clamp(1rem, 8vw, 2.3rem);
 }
 
 .text-clamp-sm {
   text-align: center;
-  font-size: clamp(.5rem, 5vw, .9rem);
+  font-size: clamp(0.5rem, 5vw, 0.9rem);
+}
+
+.react-tabs__tab--selected {
+  box-shadow: 0 0 50px 1px #1da2e530, 0 0 80px 7px #dadaa03f,
+    0 0 150px 20px #7f28d562, 0 0 250px 15px #d1157944;
+  transform: translateY(-3px) scaleY(1.1);
+  font-weight: bold;
+}
+
+.cool_title_underline {
+  background-image: repeating-linear-gradient(
+    125deg,
+    rgb(180, 96, 226) 0px,
+    rgb(180, 96, 226) 45px,
+    rgb(152, 30, 213) 45px,
+    rgb(196, 124, 232) 76px,
+    rgb(165, 69, 221) 76px,
+    rgb(165, 69, 221) 114px,
+    rgb(211, 151, 237) 114px,
+    rgb(211, 151, 237) 127px,
+    rgb(242, 206, 248) 127px,
+    rgb(242, 206, 248) 139px,
+    rgb(227, 179, 243) 139px,
+    rgb(227, 179, 243) 170px
+  );
+  position: absolute;
+  bottom: 28px;
+  width: 80%;
+  z-index: -1;
+  transform: scaleY(0.2);
+  border-radius: 10px 20%;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
 }

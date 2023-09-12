@@ -27,15 +27,15 @@ const Nav = () => {
       className="z-10 max-w-5xl w-full items-center justify-between lg:flex"
     >
       <div className="pointer-events-none flex-col flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 justify-center items-center">
-        <h1 className="font-bold text-clamp-lg">THALES CARDRIS</h1>
+        <h1 className="font-bold text-clamp-lg ">THALES CARDRIS</h1>
         <h2 className="font-light text-clamp-sm">
           Musician | Sound Engineer | Sound Designer
         </h2>
       </div>
       <div className="text-[1.2rem] flex items-center justify-center gap-2 p-8 lg:pointer-events-auto lg:p-0">
-        Language:
+        😁 Language:
         <select className="rounded bg-black hover:cursor-pointer">
-          <option value="">English </option>
+          <option value="">English</option>
           <option value="">French</option>
         </select>
       </div>
