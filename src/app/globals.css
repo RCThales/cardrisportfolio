@@ -35,3 +35,13 @@ body {
   box-shadow: 0 0 50px 1px #072a3c30, 0 0 80px 7px #2727213f, 0 0 150px 20px #36115a62,
     0 0 250px 15px #650b3b78;
 }
+
+.text-clamp-lg{
+    text-align: center;
+  font-size: clamp(1rem, 8vw, 2.3rem);
+}
+
+.text-clamp-sm {
+  text-align: center;
+  font-size: clamp(.5rem, 5vw, .9rem);
+}
