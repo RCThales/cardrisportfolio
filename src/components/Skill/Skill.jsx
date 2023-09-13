@@ -20,7 +20,7 @@ const Skill = () => {
         ></motion.div>
       </div>
 
-      <ul className="flex flex-col lg:flex-row justify-center items-start gap-24 pt-8">
+      <ul className="flex flex-col lg:flex-row justify-center text-center  md:text-justify lg:text-justify  gap-24 pt-8">
         <div>
           <li className="font-bold">MUSIC</li>
           <li>Composition</li>
