@@ -1,45 +1,110 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const Nav = () => {
-    const fadeInAndSlideDownVariants = {
-      hidden: {
-        opacity: 0,
-        y: -50, // Initial position above the element
+  const fadeInAndSlideDownVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50, // Initial position above the element
+    },
+    visible: {
+      opacity: 1,
+      y: 0, // Final position at the element's natural position
+      transition: {
+        type: "spring", // You can choose a different transition type
+        duration: 1, // Animation duration in seconds
+        delay: 0.2, // Delay the animation by 0.5 seconds
       },
-      visible: {
-        opacity: 1,
-        y: 0, // Final position at the element's natural position
-        transition: {
-          type: "spring", // You can choose a different transition type
-          duration: 1, // Animation duration in seconds
-          delay: 0.2, // Delay the animation by 0.5 seconds
-        },
-      },
-    };
+    },
+  };
 
   return (
-    <motion.nav
-      initial="hidden"
-      animate="visible"
-      variants={fadeInAndSlideDownVariants}
-      className="z-10 max-w-5xl w-full items-center justify-between lg:flex"
-    >
-      <div className="pointer-events-none flex-col flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 justify-center items-center">
-        <h1 className="font-bold text-clamp-lg ">THALES CARDRIS</h1>
-        <h2 className="font-light text-clamp-sm">
-          Musician | Sound Engineer | Sound Designer
-        </h2>
-      </div>
-      <div className="text-[1.2rem] flex items-center justify-center gap-2 p-8 lg:pointer-events-auto lg:p-0">
-        😁 Language:
-        <select className="rounded bg-black hover:cursor-pointer">
-          <option value="">English</option>
-          <option value="">French</option>
-        </select>
-      </div>
-    </motion.nav>
+    <>
+      <motion.nav
+        initial="hidden"
+        animate="visible"
+        variants={fadeInAndSlideDownVariants}
+        className=" h-screen fixed z-20 left-0 top-0 invisible md:invisible lg:visible bg-gray-900 bg-opacity-100 lg:bg-opacity-10 w-screen lg:w-28 shadow-black shadow-lg items-center justify-between flex flex-col"
+      >
+        <div className="flex flex-col justify-evenly items-center h-full text-[1xl]">
+          <Link
+            href={"#"}
+            className="flex font-semibold transition-all justify-center items-center flex-col hover:scale-105 rounded-lg cursor-pointer w-full p-[5px] hover:bg-pink-900"
+          >
+            <span>REEL</span>
+            <img
+              className="invert w-5"
+              alt="icon"
+              src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/film.svg?alt=media&token=5e34cd7b-dbe6-40cf-9d01-c99363019a2f"
+            ></img>
+          </Link>
+
+          <Link
+            href={"#projects"}
+            className="flex font-semibold transition-all justify-center items-center flex-col hover:scale-105 rounded-lg cursor-pointer w-full p-[5px] hover:bg-pink-900"
+          >
+            <span>PROJECTS</span>
+            <img
+              className="invert w-5"
+              alt="icon"
+              src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/briefcase%20(1).svg?alt=media&token=e20764ba-c84d-43b9-991a-f640b64f4a95"
+            ></img>
+          </Link>
+
+          <Link
+            href={"#resume"}
+            className="flex font-semibold transition-all justify-center items-center flex-col hover:scale-105 rounded-lg cursor-pointer w-full p-[5px] hover:bg-pink-900"
+          >
+            <span>RESUMÉ</span>
+            <img
+              className="invert w-5"
+              alt="icon"
+              src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/book-open.svg?alt=media&token=19990fa5-4ef9-44e6-8ad5-cb882e6ceeeb"
+            ></img>
+          </Link>
+
+          <Link
+            href={"#aboutme"}
+            className="flex font-semibold transition-all justify-center items-center flex-col hover:scale-105 rounded-lg cursor-pointer w-full p-[5px] hover:bg-pink-900"
+          >
+            <span> ABOUT ME</span>
+            <img
+              className="invert w-5"
+              alt="icon"
+              src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/user%20(1).svg?alt=media&token=c40e32ad-c415-44e5-8790-7e1c5927ed31"
+            ></img>
+          </Link>
+
+          <Link
+            href={"#skills"}
+            className="flex font-semibold transition-all justify-center items-center flex-col hover:scale-105 rounded-lg cursor-pointer w-full p-[5px] hover:bg-pink-900"
+          >
+            <span>SKILLS</span>
+            <img
+              className="invert w-5"
+              alt="icon"
+              src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/star%20(1).svg?alt=media&token=121c4ca1-0d2e-400e-92c5-ed24d0fd190a"
+            ></img>
+          </Link>
+
+          <Link
+            href={"#contact"}
+            className="flex font-semibold transition-all justify-center items-center flex-col hover:scale-105 rounded-lg cursor-pointer w-full p-[5px] hover:bg-pink-900"
+          >
+            <span>CONTACT</span>
+            <img
+              className="invert w-5"
+              alt="icon"
+              src="https://firebasestorage.googleapis.com/v0/b/thalescardrisportfol.appspot.com/o/at-sign.svg?alt=media&token=b9797d1e-a716-43ce-b44d-728a8ef25709"
+            ></img>
+          </Link>
+
+        </div>
+      </motion.nav>
+    </>
   );
 };
 

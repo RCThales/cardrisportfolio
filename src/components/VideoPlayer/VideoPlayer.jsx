@@ -3,24 +3,11 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { motion } from "framer-motion"
+import { fadeInAndSlideDownVariants } from "../../animations/animations"
 import "react-tabs/style/react-tabs.css"; // Import the default styles
 
 const VideoPlayer = () => {
-  const fadeInAndSlideDownVariants = {
-    hidden: {
-      opacity: 0,
-      y: -50, // Initial position above the element
-    },
-    visible: {
-      opacity: 1,
-      y: 0, // Final position at the element's natural position
-      transition: {
-        type: "spring", // You can choose a different transition type
-        duration: 1, // Animation duration in seconds
-        delay: 0.1,
-      },
-    },
-  };
+
 
   return (
     <>
@@ -33,7 +20,12 @@ const VideoPlayer = () => {
         >
           My Demo Reels
         </motion.h2>
-        <div className="cool_title_underline max-w-[250px]"></div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInAndSlideDownVariants}
+          className="cool_title_underline max-w-[250px]"
+        ></motion.div>
       </div>
 
       <motion.div
@@ -42,14 +34,14 @@ const VideoPlayer = () => {
         variants={fadeInAndSlideDownVariants}
       >
         <Tabs className={"glow rounded-lg"}>
-          <TabList className="flex flex-row hover:cursor-pointe rounded-t-lg gap-3 bg-gray-950">
-            <Tab className="text-[.8rem] flex text-center items-center h-[50px] justify-center lg:text-2xl md:text-[1rem] sm:text-[1rem] p-4 bg-purple-700 bg-opacity-[0.4] cursor-pointer outline-none transition-all rounded-t-lg">
+          <TabList className="flex flex-col md:flex-row lg:flex-row flex-wrap justify-center md:justify-start lg:justify-start hover:cursor-pointe rounded-t-lg gap-3 bg-gray-950">
+            <Tab className="text-[.8rem] flex text-center items-center h-[40px] justify-center lg:text-[1.3rem] md:text-[1rem] sm:text-[1rem] p-[5px] bg-purple-700 bg-opacity-[0.4] cursor-pointer outline-none transition-all rounded md:rounded-none lg:rounded-none sm:rounded-lg md:rounded-t-lg lg:rounded-t-lg">
               Sound Design
             </Tab>
-            <Tab className="text-[.8rem] flex text-center items-center h-[50px] justify-center lg:text-2xl md:text-[1rem] sm:text-[1rem] p-4 bg-fuchsia-700 bg-opacity-[0.4] cursor-pointer outline-none transition-all rounded-t-lg">
+            <Tab className="text-[.8rem] flex text-center items-center h-[40px] justify-center lg:text-[1.3rem] md:text-[1rem] sm:text-[1rem] p-[5px] bg-fuchsia-700 bg-opacity-[0.4] cursor-pointer outline-none transition-all rounded md:rounded-none lg:rounded-none sm:rounded-lg md:rounded-t-lg lg:rounded-t-lg">
               Composition
             </Tab>
-            <Tab className="text-[.8rem] flex text-center items-center h-[50px] justify-center lg:text-2xl md:text-[1rem] sm:text-[1rem] p-4 bg-pink-700 bg-opacity-[0.4] cursor-pointer outline-none transition-all rounded-t-lg">
+            <Tab className="text-[.8rem] flex text-center items-center h-[40px] justify-center lg:text-[1.3rem] md:text-[1rem] sm:text-[1rem] p-[5px] bg-pink-700 bg-opacity-[0.4] cursor-pointer outline-none transition-all rounded md:rounded-none lg:rounded-none sm:rounded-lg md:rounded-t-lg lg:rounded-t-lg">
               Full Experience
             </Tab>
           </TabList>
@@ -58,9 +50,10 @@ const VideoPlayer = () => {
             initial="hidden"
             animate="visible"
             variants={fadeInAndSlideDownVariants}
+            className="w-[90vw] lg:w-[60vw] m-0 mini_phone_reels"
           >
-            <TabPanel className={"min-w-[100%]"}>
-              <div className="px-10 py-4 border-purple-700 border border-opacity-[0.3] rounded-b-lg blur-bg">
+            <TabPanel className={"w-[100%]"}>
+              <div className="px-4 lg:px-10 py-4 border-purple-700 border border-opacity-[0.3] min-w-[100] rounded-b-lg blur-bg">
                 <h3 className="p-4 text-[1rem] text-center font-medium">
                   REEL WITH ONLY SOUND DESIGN (NO MUSIC) 🔊
                 </h3>
@@ -85,9 +78,10 @@ const VideoPlayer = () => {
             initial="hidden"
             animate="visible"
             variants={fadeInAndSlideDownVariants}
+            className="w-[90vw] lg:w-[60vw] m-0 mini_phone_reels"
           >
-            <TabPanel className={""}>
-              <div className="px-10 py-4 border-fuchsia-700 border border-opacity-[0.3] rounded-b-lg">
+            <TabPanel className={"w-[100%]"}>
+              <div className="px-4 lg:px-10 py-4 border-purple-700 border border-opacity-[0.3] min-w-[100] rounded-b-lg blur-bg">
                 <h3 className="p-4 text-[1rem] text-center font-medium">
                   REEL WITH ONLY MUSIC CREATED AND RECORDED BY ME (NO SOUND
                   DESIGN) 🎼
@@ -112,9 +106,10 @@ const VideoPlayer = () => {
             initial="hidden"
             animate="visible"
             variants={fadeInAndSlideDownVariants}
+            className="w-[90vw] lg:w-[60vw] m-0 mini_phone_reels"
           >
-            <TabPanel>
-              <div className="px-10 py-4 border-pink-700 border border-opacity-[0.3] rounded-b-lg">
+            <TabPanel className={"w-[100%]"}>
+              <div className="px-4 lg:px-10 py-4 border-purple-700 border border-opacity-[0.3] min-w-[100] rounded-b-lg blur-bg">
                 <h3 className="p-4 text-[1rem] text-center font-medium">
                   COMPLETE DEMO REEL WITH MUSIC AND SOUND DESIGN FOR THE FULL
                   EXPERIENCE 😎
