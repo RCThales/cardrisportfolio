@@ -2,24 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import { fadeInAndSlideDownVariants } from "../../animations/animations";
 
 const Nav = () => {
-  const fadeInAndSlideDownVariants = {
-    hidden: {
-      opacity: 0,
-      y: -50, // Initial position above the element
-    },
-    visible: {
-      opacity: 1,
-      y: 0, // Final position at the element's natural position
-      transition: {
-        type: "spring", // You can choose a different transition type
-        duration: 1, // Animation duration in seconds
-        delay: 0.2, // Delay the animation by 0.5 seconds
-      },
-    },
-  };
 
   return (
     <>

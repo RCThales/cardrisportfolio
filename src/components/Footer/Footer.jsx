@@ -1,11 +1,23 @@
+"use client";
+
 import React from "react";
+import { fadeInAndSlideDownVariants } from "../../animations/animations";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="flex justify-center items-center flex-col w-screen  bg-gray-900 bg-opacity-30 py-12 glow">
+    <footer
+      id="contact"
+      className="flex justify-center items-center flex-col w-screen  bg-gray-900 bg-opacity-30 py-12 glow"
+    >
       <div className="w-fit flex justify-center flex-col items-center font-semibold relative">
-        <h2 className="text-3xl mt-10 m-8">Contact Me</h2>
-        <div className="cool_title_underline"></div>
+        <h2 className="text-3xl m-8 font-bold text-center">Contact Me</h2>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInAndSlideDownVariants}
+          className="cool_title_underline"
+        ></motion.div>
       </div>
       <div className=" grid just text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-center">
         <a
