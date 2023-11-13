@@ -74,7 +74,7 @@ const VideoPlayer = () => {
             <TabPanel className={"w-[100%]"}>
               <div className="px-4 lg:px-10 py-4 border-purple-700 border border-opacity-[0.3] min-w-[100] rounded-b-lg blur-bg">
                 <h3 className="p-4 text-[1rem] text-center font-medium">
-                  If I didn't believe in you 🎼
+                  If I didn&apos;t believe in you 🎼
                 </h3>
                 <iframe width="100%" height="600"
                   src="https://www.youtube.com/embed/8M-vKPGCsjw">
