@@ -6,6 +6,7 @@ import { fadeInAndSlideDownVariants } from "../../animations/animations";
 
 const Nav = () => {
 
+  
   return (
     <>
       <motion.nav
@@ -89,6 +90,7 @@ const Nav = () => {
 
         </div>
       </motion.nav>
+
     </>
   );
 };

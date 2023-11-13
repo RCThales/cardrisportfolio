@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="pointer-events-none flex-col flex place-items-center gap-2 lg:pointer-events-auto justify-center items-center">
         <h1 className="font-bold text-clamp-lg">THALES CARDRIS</h1>
         <h2 className="font-light text-clamp-sm">
-          Composer | Musician | Sound Designer
+          Composer | Singer | Sound Designer
         </h2>
       </div>
     </motion.div>
